@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    },
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "postgres",
+            "password": "Manas8999",
+            "username": "postgres",
+            "database": "postgres"
+        }
+    ]
+}
