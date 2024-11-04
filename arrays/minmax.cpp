@@ -1,28 +1,28 @@
 #include<iostream>
 using namespace std;
 
-int getMax(int num[], int n)
+int getMax(int arr[], int size)
 {
     int max = INT_MIN;
-    for(int i=0; i<=n; i++)
+    for(int i=0; i<size; i++)
     {
-        if(num[i]>max){
-            max = num[i];
+        if(arr[i]>max)
+        {
+            max=arr[i];
+           
         }
     }
     return max;
-
 }
-
-int getMin(int num[], int n)
+int getMin(int arr[], int size)
 {
     int min = INT_MAX;
-    for(int i =0; i<=n; i++)
+    for (int i=0;i<size; i++)
     {
-    if(num[i]<min)
-    {
-        min = num[i];
-    }
+        if(arr[i]<min)
+        {
+           min=arr[i];
+        }        
     }
     return min;
 }
@@ -30,16 +30,15 @@ int getMin(int num[], int n)
 int main()
 {
     int size;
-    cin>>size; 
-
-    int num[100];
-    for(int i = 0; i<=size; i++)
+    cout<<"Enter the size of the array"<<endl;
+    cin>>size;
+    int arr[100];
+    for(int i=0; i<size; i++)
     {
-        cout<<"Enter the values of the array: "<<endl;
-        cin>>num[i];
+        cout<<"Enter the elements in the array: ";
+        cin>>arr[i];
     }
-    cout<<"Maximum number in array is: "<<getMax(num, size);
-    cout<<"Minimum number in array is: "<<getMin(num, size);
-
+    cout<<"The maximum value is: "<< getMax(arr, size)<<endl;
+    cout<<"The minimum value is: "<< getMin(arr, size)<<endl;
 
 }

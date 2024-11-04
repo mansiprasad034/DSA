@@ -1,18 +1,34 @@
 #include<iostream>
 using namespace std;
 
-void reverse(int arr[10], int size)
+void swap_alternate(int arr[10], int size)
 {
     int start = 0;
-    int end = size-1;
+    int end = 1;
 
-    while(start<=end)
+    //using while loop
+
+    while(start<size-1)
     {
         swap(arr[start], arr[end]);
-        start++;
-        end--;       
+        start = start+2;
+        end=end+2;
     }
+
+    //using foor loop
+
+    for(int i=0; i<size; i+2)
+    {
+        if(i+1 < size)
+        {
+            swap(arr[i], arr[i+1]);
+        }
+    }
+
+
 }
+
+
 
 void printArray(int arr[10], int size)
 {
@@ -21,7 +37,6 @@ void printArray(int arr[10], int size)
         cout<<arr[i]<<" ";
     }
 }
-
 
 int main()
 {
@@ -33,8 +48,9 @@ int main()
         cout<<"Enter the elements in the array"<<endl;
         cin>>arr[i];
     }
-    reverse(arr,size);
+
+    swap_alternate(arr, size);
     printArray(arr, size);
 
-}
 
+}
